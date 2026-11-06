@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Imposter</title>
+<meta name="description" content="Privacy Policy for Imposter — a pass-and-play party word game where players discover who among them is the imposter.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary-dark: #1E3A8A;
+    --primary-medium: #2563EB;
+    --primary-light: #3B82F6;
+    --indigo-deep: #312E81;
+    --indigo-mid: #4F46E5;
+
+    --text: #1A1D2B;
+    --text-body: #334155;
+    --text-muted: #64748B;
+    --text-soft: #94A3B8;
+
+    --surface: #FFFFFF;
+    --surface-alt: #F8FAFC;
+    --surface-tint: #F0F5FF;
+    --border: #E2E8F0;
+    --border-soft: #F1F5F9;
+
+    --brand-gradient: linear-gradient(135deg, #1E3A8A 0%, #2563EB 55%, #3B82F6 100%);
+    --brand-gradient-soft: linear-gradient(135deg, #EFF6FF 0%, #EEF2FF 100%);
+    --indigo-gradient: linear-gradient(135deg, #312E81 0%, #4F46E5 100%);
+
+    --shadow-sm: 0 1px 3px rgba(30, 58, 138, 0.06);
+    --shadow-md: 0 4px 14px rgba(30, 58, 138, 0.08);
+    --shadow-lg: 0 20px 48px -12px rgba(30, 58, 138, 0.18);
+    --shadow-xl: 0 32px 64px -20px rgba(30, 58, 138, 0.22);
+
+    --radius-sm: 10px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --radius-xl: 28px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-weight: 500;
+    background: #F7F9FC;
+    color: var(--text);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 0.1px;
+  }
+
+  .hero {
+    background: var(--brand-gradient);
+    color: white;
+    padding: 80px 24px 112px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before,
+  .hero::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.08);
+    pointer-events: none;
+  }
+
+  .hero::before {
+    width: 520px;
+    height: 520px;
+    top: -220px;
+    right: -160px;
+  }
+
+  .hero::after {
+    width: 320px;
+    height: 320px;
+    top: -120px;
+    right: -60px;
+    border-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .hero-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  .brand-mark {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    padding: 8px 18px 8px 8px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    margin-bottom: 32px;
+  }
+
+  .brand-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-dark);
+    font-weight: 900;
+    font-size: 17px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  }
+
+  .hero h1 {
+    font-size: clamp(34px, 5.5vw, 52px);
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    line-height: 1.1;
+    margin-bottom: 22px;
+  }
+
+  .hero .subtitle {
+    font-size: clamp(15px, 1.7vw, 17.5px);
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.88);
+    max-width: 640px;
+    line-height: 1.65;
+    letter-spacing: 0.1px;
+    margin-bottom: 36px;
+  }
+
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .meta-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.13);
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  .meta-pill svg { width: 14px; height: 14px; opacity: 0.92; flex-shrink: 0; }
+
+  .container {
+    max-width: 900px;
+    margin: -64px auto 0;
+    padding: 0 24px 80px;
+    position: relative;
+    z-index: 3;
+  }
+
+  .document {
+    background: var(--surface);
+    border-radius: var(--radius-xl);
+    padding: 56px;
+    box-shadow: var(--shadow-xl);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+  }
+
+  @media (max-width: 700px) {
+    .document { padding: 36px 24px; border-radius: var(--radius-lg); }
+    .hero { padding: 56px 20px 96px; }
+    .container { padding: 0 16px 60px; margin-top: -56px; }
+  }
+
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 16px;
+    margin-bottom: 56px;
+  }
+
+  .summary-item {
+    background: var(--surface-tint);
+    border: 1px solid rgba(191, 219, 254, 0.6);
+    border-radius: var(--radius-md);
+    padding: 22px 20px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .summary-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.02) 0%, rgba(79, 70, 229, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+
+  .summary-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: rgba(37, 99, 235, 0.35);
+  }
+
+  .summary-item:hover::before { opacity: 1; }
+
+  .summary-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--brand-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    color: white;
+    box-shadow: 0 6px 14px -2px rgba(30, 58, 138, 0.35);
+    position: relative;
+    z-index: 1;
+  }
+
+  .summary-icon svg { width: 20px; height: 20px; }
+
+  .summary-item h3 {
+    font-size: 14.5px;
+    font-weight: 800;
+    color: var(--primary-dark);
+    margin-bottom: 5px;
+    letter-spacing: 0.1px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .summary-item p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.55;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+  }
+
+  section {
+    padding: 40px 0;
+    border-top: 1px solid var(--border-soft);
+  }
+
+  section:first-of-type {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .section-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: var(--brand-gradient-soft);
+    border: 1px solid rgba(191, 219, 254, 0.8);
+    color: var(--primary-dark);
+    font-size: 13.5px;
+    font-weight: 800;
+    flex-shrink: 0;
+    letter-spacing: 0.4px;
+  }
+
+  h2 {
+    font-size: clamp(19px, 2.3vw, 23px);
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -0.3px;
+    line-height: 1.3;
+  }
+
+  section > p {
+    color: var(--text-body);
+    margin-bottom: 16px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+  }
+
+  section > p:last-child { margin-bottom: 0; }
+
+  strong {
+    color: var(--primary-dark);
+    font-weight: 700;
+  }
+
+  ul.checklist {
+    list-style: none;
+    display: grid;
+    gap: 14px;
+    margin-top: 4px;
+  }
+
+  ul.checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-size: 15px;
+    color: var(--text-body);
+    line-height: 1.65;
+    font-weight: 500;
+  }
+
+  ul.checklist li::before {
+    content: '';
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 7px;
+    background: var(--brand-gradient-soft);
+    border: 1px solid rgba(191, 219, 254, 0.9);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231E3A8A' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+    background-size: 11px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 4px;
+  }
+
+  .callout {
+    background: var(--brand-gradient-soft);
+    border-left: 4px solid var(--primary-medium);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 24px 0 8px;
+    color: var(--primary-dark);
+    font-size: 14.5px;
+    line-height: 1.7;
+    font-weight: 600;
+    letter-spacing: 0.1px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .permission-row {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 18px;
+    padding: 22px 20px;
+    background: var(--surface-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    margin-bottom: 12px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .permission-row:last-child { margin-bottom: 0; }
+
+  .permission-row:hover {
+    border-color: rgba(37, 99, 235, 0.3);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .permission-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: var(--brand-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 6px 14px -2px rgba(30, 58, 138, 0.35);
+  }
+
+  .permission-icon svg { width: 22px; height: 22px; }
+
+  .permission-row h4 {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--primary-dark);
+    margin-bottom: 5px;
+    letter-spacing: 0.1px;
+  }
+
+  .permission-row p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.65;
+    font-weight: 600;
+  }
+
+  .contact-card {
+    background: var(--indigo-gradient);
+    border-radius: var(--radius-lg);
+    padding: 40px 32px;
+    color: white;
+    text-align: center;
+    margin-top: 16px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 44px -12px rgba(49, 46, 129, 0.4);
+  }
+
+  .contact-card::before {
+    content: '';
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    top: -140px;
+    right: -80px;
+    pointer-events: none;
+  }
+
+  .contact-card::after {
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.08);
+    bottom: -90px;
+    left: -50px;
+    pointer-events: none;
+  }
+
+  .contact-card h3 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: -0.2px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .contact-card p {
+    font-size: 14.5px;
+    color: rgba(255, 255, 255, 0.82);
+    margin-bottom: 24px;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+  }
+
+  .contact-card a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(6px, 1.6vw, 10px);
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    color: var(--primary-dark);
+    text-decoration: none;
+    padding: 14px clamp(10px, 2.6vw, 22px);
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 14.5px;
+    letter-spacing: 0.2px;
+    transition: transform 0.2s ease, box-shadow 0.25s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 1;
+  }
+
+  .contact-card a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22);
+  }
+
+  .contact-card a svg {
+    width: clamp(12px, 3.8vw, 17px);
+    height: clamp(12px, 3.8vw, 17px);
+    flex-shrink: 0;
+  }
+
+  .contact-card a span {
+    display: block;
+    white-space: nowrap;
+    font-size: clamp(9.5px, 3.4vw, 14.5px);
+    letter-spacing: clamp(0px, 0.05vw, 0.2px);
+    line-height: 1.2;
+  }
+
+  footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px 24px 56px;
+    text-align: center;
+    color: var(--text-soft);
+    font-size: 13px;
+    line-height: 1.7;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+  }
+
+  footer a {
+    color: var(--primary-medium);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.15s ease;
+  }
+
+  footer a:hover { color: var(--primary-dark); }
+
+  footer .divider {
+    width: 48px;
+    height: 2px;
+    background: var(--brand-gradient);
+    margin: 22px auto;
+    border-radius: 2px;
+    opacity: 0.6;
+  }
+
+  @media (max-width: 640px) {
+    .summary-grid { gap: 12px; margin-bottom: 40px; }
+    .summary-item { padding: 18px 16px; }
+    .summary-icon { width: 40px; height: 40px; margin-bottom: 12px; }
+    section { padding: 32px 0; }
+    .contact-card { padding: 32px 22px; }
+    .contact-card h3 { font-size: 18px; }
+    .permission-row { padding: 18px 16px; grid-template-columns: 44px 1fr; gap: 14px; }
+    .permission-icon { width: 44px; height: 44px; border-radius: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="brand-mark">
+      <span class="brand-icon">🎭</span>
+      <span>Imposter</span>
+    </div>
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">
+      Imposter is designed with a privacy-first architecture. All game data — player names, custom words, and preferences — resides exclusively on your device. No accounts, no analytics, no third-party services, no internet connection required.
+    </p>
+    <div class="meta-row">
+      <span class="meta-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Effective 6 November 2026
+      </span>
+      <span class="meta-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Zero data collection
+      </span>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <article class="document">
+
+    <div class="summary-grid">
+      <div class="summary-item">
+        <div class="summary-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <h3>No Account Required</h3>
+        <p>No registration, no sign-in, no email required to use the App.</p>
+      </div>
+      <div class="summary-item">
+        <div class="summary-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+        </div>
+        <h3>No Tracking</h3>
+        <p>No analytics, no advertising, no third-party SDKs integrated.</p>
+      </div>
+      <div class="summary-item">
+        <div class="summary-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <h3>Local Storage Only</h3>
+        <p>Your data remains on your device and is never transmitted.</p>
+      </div>
+    </div>
+
+    <section>
+      <div class="section-header">
+        <span class="section-number">01</span>
+        <h2>Introduction and Scope</h2>
+      </div>
+      <p>
+        This Privacy Policy describes how Imposter handles user information. Imposter is a pass-and-play party word game in which one or more players are secretly assigned the role of imposter and do not know the round's secret word. The App is distributed through the Google Play Store.
+      </p>
+      <p>
+        By installing or using Imposter, you acknowledge that you have read and understood this Policy. This Policy applies solely to the App and does not extend to any third-party services, websites, or applications that may be referenced within it.
+      </p>
+      <div class="callout">
+        Summary: Imposter does not collect, transmit, or share any personal information. All data you enter remains exclusively on your device.
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <span class="section-number">02</span>
+        <h2>Information We Do Not Collect</h2>
+      </div>
+      <p>
+        Imposter has been built to avoid the collection of personal data entirely. Specifically, the App does not collect, request, or process:
+      </p>
+      <ul class="checklist">
+        <li>Names, email addresses, phone numbers, or any other contact information.</li>
+        <li>User accounts, credentials, or authentication data of any kind.</li>
+        <li>Analytics, telemetry, or usage statistics.</li>
+        <li>Advertising identifiers or advertising-related data.</li>
+        <li>Location data, whether precise or approximate.</li>
+        <li>Access to contacts, calendars, camera, microphone, or files on your device.</li>
+        <li>Crash reports or diagnostic information transmitted to external servers.</li>
+        <li>Device identifiers, IP addresses, or network information.</li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <span class="section-number">03</span>
+        <h2>Information Stored Locally</h2>
+      </div>
+      <p>
+        Imposter stores the following information <strong>exclusively on your device</strong>, using the platform's private application storage. This information is never transmitted to any server, third party, or external service:
+      </p>
+      <ul class="checklist">
+        <li>Player names entered by you during a round.</li>
+        <li>Custom words created by you through the in-app editor.</li>
+        <li>Word categories selected in the Game Setup screen.</li>
+        <li>Word pick history, used solely to reduce the repetition of recently used words across rounds.</li>
+        <li>Language preference for the in-game word display (English, Nepali, or both), kept separate from the App's interface language.</li>
+        <li>App preferences including sound effects, volume, and haptic feedback settings.</li>
+      </ul>
+      <p style="margin-top: 24px;">
+        You retain complete control over this data. It is deleted automatically upon uninstallation of Imposter, or manually through the in-app options.
+      </p>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <span class="section-number">04</span>
+        <h2>System Permissions</h2>
+      </div>
+      <p>
+        Imposter does not request or require any Android runtime permissions. The App functions fully offline and does not access any device features that would grant access to personal information. Specifically, Imposter does <strong>not</strong> request:
+      </p>
+      <ul class="checklist">
+        <li>Camera or microphone access.</li>
+        <li>Location services of any kind.</li>
+        <li>Contacts, calendar, or call log access.</li>
+        <li>Photos, media, or external file storage.</li>
+        <li>Phone state, device identifiers, or network information.</li>
+        <li>Internet or network access.</li>
+      </ul>
+      <div class="callout">
+        Note: Standard system events such as haptic feedback and local audio playback are used during gameplay but do not require or grant any privacy-sensitive permission on Android.
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <span class="section-number">05</span>
+        <h2>Third-Party Services</h2>
+      </div>
+      <p>
+        Imposter does not integrate any third-party SDKs, analytics providers, advertising networks, or cloud storage services. The App operates as a self-contained program and does not establish network connections to external services for the purpose of data collection or transmission. Imposter is fully functional in airplane mode and requires no internet connection at any point.
+      </p>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <span class="section-number">06</span>
+        <h2>Children's Privacy</h2>
+      </div>
+      <p>
+        Imposter does not knowingly collect personal information from any individual, including children under the age of 13 or the applicable age of digital consent in your jurisdiction. Since the App does not collect personal information of any kind, it is suitable for users of all ages without restriction.
+      </p>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <span class="section-number">07</span>
+        <h2>Data Security</h2>
+      </div>
+      <p>
+        All data stored by Imposter is contained within your device's private application storage sandbox, protected by the operating system's native security mechanisms. Neither the developer nor any third party has access to this data.
+      </p>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <span class="section-number">08</span>
+        <h2>Changes to This Policy</h2>
+      </div>
+      <p>
+        We reserve the right to update this Privacy Policy to reflect changes in the App's functionality or applicable legal requirements. Any revisions will be reflected on this page with an updated effective date. Continued use of the App following publication of changes constitutes acceptance of the revised Policy.
+      </p>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <span class="section-number">09</span>
+        <h2>Contact</h2>
+      </div>
+      <p>
+        For questions, concerns, or requests related to this Privacy Policy, please contact us:
+      </p>
+      <div class="contact-card">
+        <h3>Get in Touch</h3>
+        <p>We typically respond within 24–48 hours.</p>
+        <a href="mailto:siddhanttimalsina2007@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>siddhanttimalsina2007@gmail.com</span>
+        </a>
+      </div>
+    </section>
+
+  </article>
+</main>
+
+<footer>
+  <div>© 2026 Imposter. All rights reserved.</div>
+  <div class="divider"></div>
+  <div>Developed by <a href="mailto:siddhanttimalsina2007@gmail.com">Siddhant Timalsina</a></div>
+</footer>
+
+</body>
+</html>
